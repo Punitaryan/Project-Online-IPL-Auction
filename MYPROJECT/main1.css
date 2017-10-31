@@ -1,0 +1,47 @@
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.aboutus{
+	background-color: black;
+	opacity: .7;
+	border-radius: 10px;
+	padding: 40px;
+	padding-top: 20px;
+	color: white;
+}
+.heading{
+	text-align: center;
+}
+input, select, textarea{
+	width: 100%;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 2px solid white;
+	padding: 10px;
+	margin: 5px;
+}
+.col2{
+	width: 50%;
+	display: inline-block;
+}
+.col3{
+	width: 15%;
+	display: inline-block;
+}
+.bloodscore{
+	font-size: 27px;
+	text-align: center;
+	line-height: 46px;
+}
+.contactus{
+	font-size: 25px;
+	text-align: center;
+}
+a:link, a:visited{
+	color: white;
+}
+option{
+	padding: 5px;
+	color: black;
+}

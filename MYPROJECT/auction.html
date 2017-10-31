@@ -1,0 +1,76 @@
+<head>
+	<title>FILL DETAILS</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+<body>
+<div class="row slideshow">
+		<img height="813px" name="slide" src="" width="1500px" />
+</div>
+<div class="header"></div>
+<div class="header-name">AUCTION</div>
+<div id="header-line">...JAISA KHARIDO WAISA ENTERTAINMENT</div>
+<br><br><br><br><br><br><br>
+<div>
+	<div class="col-md-6"><center>
+	<iframe src="http://free.timeanddate.com/countdown/i56w88we/n2452/cf12/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pcfff/tcfff/fs100/szw448/szh189/tatTime%20left%20to%20Event%20in/tac000/tptTime%20since%20Event%20started%20in/tpc000/mac000/mpc000/iso2016-05-12T00:00:00" allowTransparency="true" frameborder="0" width="252" height="94"></iframe>
+		</center>
+	</div>
+		
+	<div class="col-md-6"><center>
+		<div class="signup-div-back opacity">Place your bid!!!
+			<div class="signup"><br>
+				<form name="signupform" action="auction.php" method="POST" onsubmit="return signupvalidation()">
+					<input type="text" name="username" placeholder="USER NAME" required><br><br>
+					<input type="text" name="playername" placeholder="PLAYER NAME" required><br><br>
+					<input class="input-col2" type="text" name="player_Id" placeholder="PLAYER ID" required>
+					<input class="input-col2" type="text" name="amount" placeholder="YOUR AMOUNT" required><br><br>
+					<span id="pass-msg" class="error-msg"></span><br>
+					<input class="login-button" type="submit" name="submit" value="Place my bid">
+				</form>
+			</div>
+		</div></center>
+	</div>
+</div>
+<div class="footer" style="position: fixed; bottom: 0;"><center>
+	Developers: Punit kumar| R Megha | Rajendra<br>
+	All Rights Reserved... About Developers</center>
+</div>
+
+<script type="text/javascript">	
+	function signupvalidation()
+	{
+		var x = document.forms["signupform"]["password"].value;
+		var y = document.forms["signupform"]["repassword"].value;
+		var flag=0;
+		if (x!=y) 
+		{
+			document.getElementById('pass-msg').innerHTML = "Oopss!! Password Miss Match!!!";
+			return false;
+		};
+	}
+	var i = 0;
+	var path = new Array();
+
+	path[0] = "images/slideshow/pic1.jpg";
+	path[1] = "images/slideshow/pic2.jpg";
+	path[2] = "images/slideshow/pic3.jpg";
+	path[3] = "images/slideshow/pic4.jpg";
+	path[4] = "images/slideshow/pic5.jpg";
+	//path[5] = "pics/slideshow/pic6.JPG";
+	
+
+	function swapImage()
+	{
+		document.slide.src = path[i];
+   		if(i < path.length - 1) i++; else i = 0;
+   		setTimeout("swapImage()",7000);
+	}
+	window.onload=swapImage;
+			
+</script>
+</body>
+
+</html>
